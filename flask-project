@@ -1,0 +1,30 @@
+mkdir $1
+mkdir -p $1/main
+mkdir -p $1/migrations
+mkdir -p $1/static
+mkdir -p $1/template
+mkdir -p $1/tests
+cd $1
+virtualenv venv
+>__init__.py
+> main/__init__.py
+> main/errors.py
+> main/forms.py
+> main/views.py
+> email.py
+> models.py
+> tests/__init_.py
+> requirements.txt
+source venv/bin/activate
+pip install flask-script
+pip install flask-bootstrap
+pip install flask-moment
+pip install flask-sqlalchemy
+pip install flask-migrate
+pip install flask-mail
+pip install flask-login
+pip install flask-pagedown markdown bleach
+pip install flask-httpauth
+pip install flask-wtf
+echo "DONE"
+
